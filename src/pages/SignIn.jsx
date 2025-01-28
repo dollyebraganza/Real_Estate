@@ -17,7 +17,7 @@ export default function SignUp() {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await fetch('http://localhost:3001/api/auth/signin', {
+      const res = await fetch('http://localhost:3001/api/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ export default function SignUp() {
       }
       setLoading(false);
       setError(null);
-      navigate('/sign-in');
+      navigate('/sign-up');
     } catch (error) {
       setLoading(false);
       setError(error.message);
