@@ -17,7 +17,7 @@ export default function SignUp() {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await fetch('/api/auth/sign', {
+      const res = await fetch('http://localhost:3001/api/auth/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
