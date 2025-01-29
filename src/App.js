@@ -13,9 +13,7 @@ function App() {
     <>
       <Router>
         <Header />
-        <div className="h-96">
-
-        </div>
+       
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/sign-in" element={<SignIn />} />
