@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-export default function SignUp() {
+export default function LogIn() {
   const [formData, setFormData]= useState({})
   const handleChange = (e) => {
     setFormData(
@@ -13,7 +13,7 @@ export default function SignUp() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch('/api/auth/signup', formData);
+    const res = await fetch('/api/auth/login', formData);
     console.log(res);
   }
   return (
@@ -25,10 +25,10 @@ export default function SignUp() {
           className='border p-3 rounded-lg' id='email' onChange={handleChange}/>
         <input type="password" placeholder='password'
           className='border p-3 rounded-lg' id='password'/>
-          <button className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'>Sign up</button>
+          <button className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'>Log in</button>
         </form>
         <div className="flex gap-2 mt-5">
-          <p>Don't have an account?</p>
+          <p>Dont have an account?</p>
           <Link to={"/sign-up"}>
           <span className='text-blue-700'> Sign Up</span>
           </Link>
